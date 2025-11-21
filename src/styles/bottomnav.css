@@ -1,0 +1,173 @@
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 700px;
+
+  display: flex;
+  justify-content: space-around;
+
+  padding: 10px 6px;
+
+  background: rgba(10, 14, 30, 0.92);
+  backdrop-filter: blur(18px);
+  border-top: 1px solid rgba(255,255,255,0.15);
+
+  z-index: 3000;
+}
+
+/* Hide on desktop */
+@media (min-width: 768px) {
+  .bottom-nav {
+    display: none;
+  }
+}
+
+.b-item {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  color: #cbd5e1;
+
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 4px 0;
+}
+
+.b-item.active {
+  color: #ffb86c;
+  font-weight: 700;
+}
+/* ==============================
+   PK ESPORTS BOTTOM NAV (MOBILE)
+   ============================== */
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(720px, 100%);
+
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.96),
+    rgba(3, 7, 18, 0.96)
+  );
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(20px) saturate(1.3);
+
+  z-index: 2500;
+  animation: bottomNavIn 0.4s ease-out;
+}
+
+/* only show on mobile */
+@media (min-width: 768px) {
+  .bottom-nav {
+    display: none;
+  }
+}
+
+/* each item */
+.b-item {
+  flex: 1;
+  text-decoration: none;
+  color: #cbd5e1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+
+  padding: 6px 4px;
+  border-radius: 16px;
+
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  transition: 0.2s ease;
+}
+
+/* icon wrapper */
+.b-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: radial-gradient(circle at 30% 0%, rgba(255, 123, 41, 0.6), transparent);
+  box-shadow: 0 0 10px rgba(255, 123, 41, 0.4);
+}
+
+.b-icon svg {
+  font-size: 14px;
+}
+
+/* label */
+.b-label {
+  opacity: 0.8;
+}
+
+/* hover / press */
+.b-item:hover {
+  background: rgba(148, 163, 184, 0.16);
+  transform: translateY(-1px);
+}
+
+/* active state — neon glow + pulse */
+.b-item.active {
+  background: rgba(255, 123, 41, 0.22);
+  box-shadow: 0 0 16px rgba(255, 123, 41, 0.6);
+  color: #fed7aa;
+}
+
+.b-item.active .b-icon {
+  background: radial-gradient(circle at 30% 0%, #ff7b29, #ffb86c);
+  box-shadow: 0 0 18px rgba(255, 123, 41, 0.9);
+  animation: bPulse 1.4s ease-in-out infinite;
+}
+
+.b-item.active .b-label {
+  opacity: 1;
+}
+
+/* entrance animation */
+@keyframes bottomNavIn {
+  from {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+/* pulse for active icon */
+@keyframes bPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 14px rgba(255, 123, 41, 0.7);
+  }
+  50% {
+    transform: scale(1.07);
+    box-shadow: 0 0 26px rgba(255, 184, 108, 0.95);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 14px rgba(255, 123, 41, 0.7);
+  }
+}

@@ -1,0 +1,130 @@
+/* CONTACT PAGE MAIN CONTAINER */
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  color: #fff;
+}
+
+/* TITLE + SUBTITLE */
+.page-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.page-subtitle {
+  font-size: 18px;
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+
+/* GLASS CARD */
+.contact-card {
+  width: 100%;
+  max-width: 1000px;
+  padding: 40px;
+  border-radius: 25px;
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.45);
+}
+
+.contact-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.contact-desc {
+  font-size: 16px;
+  opacity: 0.85;
+  margin-bottom: 30px;
+}
+
+/* CONTACT GRID */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* CONTACT ITEM */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 18px;
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.contact-item:hover {
+  background: rgba(255, 255, 255, 0.13);
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* ICONS */
+.contact-icon {
+  font-size: 32px;
+  color: #9bbcff;
+}
+
+.contact-icon.insta {
+  color: #ff66b3;
+}
+
+.contact-icon.fb {
+  color: #4e8cff;
+}
+
+.contact-icon.yt {
+  color: #ff4747;
+}
+
+/* TEXT INSIDE ITEMS */
+.contact-item h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* WHATSAPP BUTTON */
+.btn-full {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-top: 25px;
+  padding: 14px 20px;
+
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+
+  background: linear-gradient(135deg, #ff7a29, #ffa862);
+  color: #000;
+  text-decoration: none;
+
+  transition: 0.25s ease;
+}
+
+.btn-full:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 140, 71, 0.6);
+}

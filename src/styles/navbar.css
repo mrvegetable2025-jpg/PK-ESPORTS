@@ -1,0 +1,145 @@
+/* ===============================
+   PK ESPORTS DESKTOP NAVBAR
+   =============================== */
+
+/* MAIN SHELL */
+.nav-shell {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1180px, 96%);
+
+  padding: 14px 26px;
+  border-radius: 28px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* GLASS BACKGROUND + GRADIENT */
+  background: rgba(20, 25, 40, 0.55);
+  backdrop-filter: blur(22px) saturate(1.8);
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 123, 41, 0.18),
+    rgba(10, 10, 20, 0.92) 60%
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  /* NEON GLOW */
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.85),
+    0 0 26px rgba(255, 123, 41, 0.25);
+
+  z-index: 5000;
+}
+
+/* LOGO */
+.nav-logo {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.logo-main {
+  font-size: 1.4rem;
+  font-weight: 900;
+  background: linear-gradient(120deg, #ffe8d6, #ffb86c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.logo-sub {
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #cbd5e1;
+}
+
+/* DESKTOP LINKS */
+.nav-links.desktop-only {
+  display: flex;
+  gap: 18px;
+}
+
+.nav-link {
+  padding: 10px 18px;
+  border-radius: 18px;
+
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+
+  color: #e2e8f0;
+  transition: 0.28s ease;
+
+  position: relative;
+}
+
+/* Hover glow */
+.nav-link:hover {
+  background: rgba(255, 123, 41, 0.2);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Neon underline */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 6px;
+  height: 2px;
+
+  background: linear-gradient(90deg, #ff7a2d, #ffd7a1);
+  opacity: 0;
+  transform: scaleX(0.4);
+  transition: 0.28s ease;
+}
+
+.nav-link:hover::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* ACTIVE LINK (from NavLink .active class) */
+.nav-link.active {
+  background: rgba(255, 123, 41, 0.85);
+  color: #0b0f19;
+  box-shadow: 0 8px 28px rgba(255, 123, 41, 0.55);
+}
+
+.nav-link.active::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* ===============================
+   MOBILE – HIDE DESKTOP NAV
+   (BottomNav will be used there)
+   =============================== */
+@media (max-width: 768px) {
+  .nav-links.desktop-only {
+    display: none;
+  }
+
+  .nav-shell {
+    width: calc(100% - 20px);
+    border-radius: 22px;
+    padding-inline: 16px;
+  }
+}
+.nav-link.active {
+  background: rgba(255, 123, 41, 0.85);
+  color: #0b0f19;
+  box-shadow: 0 8px 28px rgba(255, 123, 41, 0.55);
+}
+
+.nav-link.active::after {
+  opacity: 1;
+  transform: scaleX(1);
+}

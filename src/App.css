@@ -1,0 +1,83 @@
+/* src/app.css */
+
+/* We DO NOT style anything globally here now */
+#root {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+/* ===============================
+   CONTACT PAGE
+   ===============================*/
+
+.contact-card {
+  padding: 26px 26px;
+  margin-top: 16px;
+}
+
+.contact-title {
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+}
+
+.contact-desc {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 18px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  text-decoration: none;
+  color: var(--text-main);
+  transition: 0.25s ease;
+}
+
+.contact-item:hover {
+  background: rgba(255, 123, 41, 0.18);
+  transform: translateY(-2px);
+}
+
+.contact-icon {
+  font-size: 1.6rem;
+  color: var(--orange);
+  filter: drop-shadow(0 0 6px rgba(255, 123, 41, 0.6));
+}
+
+.contact-icon.insta {
+  color: #ff0069;
+  filter: drop-shadow(0 0 6px rgba(255, 0, 111, 0.7));
+}
+
+.contact-icon.fb {
+  color: #3b82f6;
+  filter: drop-shadow(0 0 6px rgba(59, 130, 246, 0.7));
+}
+
+.contact-icon.yt {
+  color: #ff3333;
+  filter: drop-shadow(0 0 6px rgba(255, 51, 51, 0.7));
+}
+
+.contact-item h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.contact-item p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}

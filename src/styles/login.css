@@ -1,0 +1,139 @@
+/* MAIN GLASS BOX */
+.page.glass-card {
+  width: 100%;
+  max-width: 950px;
+  margin: 60px auto;
+  padding: 40px;
+
+  border-radius: 28px;
+  background: rgba(30, 35, 50, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.55);
+  animation: fadeIn 0.6s ease;
+  color: #fff;
+}
+
+/* TITLE */
+.page.glass-card h1 {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.page-subtitle {
+  text-align: center;
+  opacity: 0.85;
+  margin-bottom: 35px;
+  font-size: 17px;
+}
+
+/* FORM */
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* LABELS */
+.booking-form label {
+  font-size: 15px;
+  opacity: 0.9;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+
+/* INPUTS */
+.booking-form input {
+  padding: 14px 16px;
+  border-radius: 14px;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  outline: none;
+
+  transition: 0.25s ease, border 0.2s;
+}
+
+/* INPUT GLOW ON FOCUS */
+.booking-form input:focus {
+  border-color: #ff8b3d;
+  box-shadow: 0 0 12px rgba(255, 130, 60, 0.6);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* PRIMARY BUTTON (GLOWING GRADIENT) */
+.btn-primary {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #ff822e, #ffbb78);
+  border: none;
+  border-radius: 16px;
+  color: #000;
+  cursor: pointer;
+
+  box-shadow: 0 0 20px rgba(255, 135, 60, 0.4);
+  transition: 0.25s ease;
+}
+
+/* BUTTON HOVER */
+.btn-primary:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(255, 130, 60, 0.7);
+}
+
+/* SECONDARY BUTTON (Logout) */
+.btn-secondary {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* ACCOUNT DETAILS BOX */
+.booking-details {
+  margin-top: 20px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* INFO TEXT */
+.info-text {
+  margin-top: 12px;
+  text-align: center;
+  opacity: 0.85;
+  font-size: 15px;
+}
+
+/* SMOOTH ENTRY ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
