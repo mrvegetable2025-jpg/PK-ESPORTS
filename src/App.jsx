@@ -10,6 +10,7 @@ import BottomNav from "./components/BottomNav.jsx";   // <-- ADDED
 const HomePage = React.lazy(() => import("./pages/HomePage.jsx"));
 const TournamentsPage = React.lazy(() => import("./pages/TournamentsPage.jsx"));
 const BookingPage = React.lazy(() => import("./pages/BookingPage.jsx"));
+
 const LoginPage = React.lazy(() => import("./pages/LoginPage.jsx"));
 const AboutPage = React.lazy(() => import("./pages/AboutPage.jsx"));
 const ContactPage = React.lazy(() => import("./pages/ContactPage.jsx"));
